@@ -73,11 +73,7 @@ public class DDDataNode extends DataNode {
         if (saxError == null) {
             if (dataObject instanceof DDFragmentDataObject) {
                 URL url = null;
-                try {
-                    url = dataObject.getPrimaryFile().getURL();
-                } catch (FileStateInvalidException ex) {
-                    // ignore
-                }
+                url = dataObject.getPrimaryFile().toURL();
                 return NbBundle.getBundle(DDDataNode.class).getString("HINT_web_fragment_dd") + (url != null ? " ["+url+"]" : "");
             }
             else

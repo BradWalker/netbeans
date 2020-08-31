@@ -59,7 +59,7 @@ public class SchemaElementUtil {
                 String tempURL = ""; //NOI18N
                 if (schemaFO != null)
                     try {
-                        tempURL = schemaFO.getURL().toString();
+                        tempURL = schemaFO.toURL().toString();
                     } catch (Exception exc) {
                         Logger.getLogger("global").log(Level.INFO, null, exc);
                     }
